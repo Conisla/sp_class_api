@@ -1,0 +1,4 @@
+0 Normal
+1 Tapered
+2 Pyriform
+3 Amorphous

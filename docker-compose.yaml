@@ -1,0 +1,13 @@
+version: '3'
+services:
+  django_app:
+    image: image_api_fertility
+    container_name: django_container
+    ports:
+      - "8000:8000"
+  streamlit_app:
+    image: image_streamlit_fertility
+    container_name: streamlit_container
+    ports:
+      - "8501:8501"
+  

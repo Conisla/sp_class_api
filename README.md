@@ -1,39 +1,49 @@
-# Virtual env
+# Installation et Configuration
 
-```sh
-python -m venv .env
-.\.env\Scripts\activate.bat
-```
+## API Django
 
-# Dependencies
+1. Clonez le dépôt du projet
+2. Accédez au répertoire de l'API Django :
 
-```sh
-pip install requirements.txt
-```
+    ```bash
+    cd backend
+    ```
 
-# Docker 
+3. Créez et activez un environnement virtuel :
 
-## Docker Images
+    ```bash
+    python -m venv venv
+    venv\Scripts\activate
+    ```
 
-```sh
-cd backend
-docker build -t image_api_fertility .
-```
+4. Installez les dépendances :
 
-```sh
-cd front
-docker build -t image_streamlit_fertility .
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## Docker compose 
+5. Lancez les migrations pour créer la base de données :
 
-```sh
-docker-compose up -d
-```
+    ```bash
+    python manage.py migrate
+    ```
 
-# Stop
-```sh
-docker-compose stop
-```
+6. Lancez l'API Django :
 
-Go to http://localhost:8501/
+    ```bash
+    python manage.py runserver
+    ```
+
+### **Application Streamlit**
+
+1. Accédez au répertoire de l'application Streamlit :
+
+    ```bash
+    cd front
+    ```
+
+2. Lancez l'application Streamlit :
+
+    ```bash
+    streamlit run app.py
+    ```
